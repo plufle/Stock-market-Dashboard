@@ -1,0 +1,104 @@
+#ticker-grid {
+  display: flex;
+  flex-wrap: warp;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 25s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#tickers-grid table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#tickers-grid table,
+#tickers-grid td,
+#tickers-grid th {
+  border: 1px solid #fff;
+}
+
+#tickers-grid td,
+#tickers-grid th {
+  padding: 20px;
+  text-align: center;
+}
+
+#tickers-grid tr:first-child td {
+  background-color: #444;
+  font-weight: bold;
+}
+
+.black-box {
+  background-color: #333;
+  color: white;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 100px;
+  text-align: center;
+}
+#add-ticker-form {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#new-ticker {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.stock-box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #333;
+  margin: 10px;
+  padding: 10px;
+  transition: background-color 0.5s;
+  background: #eee;
+}
+
+#timer {
+  text-align: right;
+}

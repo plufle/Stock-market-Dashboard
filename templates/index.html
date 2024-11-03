@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stock Price</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename = 'styles.css')}}"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{url_for('static', filename = 'script.js')}}"></script>
+  </head>
+  <body>
+    <div class="black-box">
+      <form id="add-ticker-form">
+        <input type="text" id="new-ticker" placeholder="Add Ticker" required />
+        <button type="submit">Add</button>
+      </form>
+
+      <div>
+        <table id="tickers-grid">
+          <tr>
+            <td>Stock</td>
+            <td>Price</td>
+            <td>Percentage Change</td>
+            <td>Prediction</td>
+            <td>Remove</td>
+          </tr>
+        </table>
+      </div>
+      <p id="timer">Next update in <span id="counter"></span> seconds.</p>
+    </div>
+  </body>
+</html>
